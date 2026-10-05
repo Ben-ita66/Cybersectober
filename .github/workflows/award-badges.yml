@@ -8,12 +8,13 @@ on:
     branches: [main]
     paths:
       - data/manual-awards.json
+      - data/organizers.json
       - scripts/award_badges.py
       - .github/workflows/award-badges.yml
       - badges/**
       - site/**
   schedule:
-    - cron: "17 0 * * *"
+    - cron: "17 * * * *"
   workflow_dispatch:
     inputs:
       pr_number:
