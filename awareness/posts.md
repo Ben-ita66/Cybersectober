@@ -6,3 +6,4 @@ Add **one post per pull request**: a short description, the link to your public 
 
 - [Why your bank will never ask for your OTP](https://www.example.com/your-post-link) (@cybersectober team, example)
 - [Devices: Cybersecurity, Privacy, and Security Risks for Employees and Organizations](https://www.linkedin.com/posts/oluwafemi-shorunke-a37014207_cybersectober-cybersecurityawareness-endpointsecurity-share-7512919394134446080-_GON/) (@Agbafamo)
+- [How to spot a phishing email](https://www.linkedin.com/posts/nwabueze-benita_cybersecurityawarenessmonth-phishing-cyberawareness-ugcPost-7513008309860446208-F3mV/) (@Ben-ita66)
