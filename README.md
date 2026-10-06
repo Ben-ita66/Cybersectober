@@ -6,7 +6,7 @@
 
 A month-long open-source cybersecurity challenge for Cybersecurity Awareness Month. Share what you know about staying safe online, add it to a free library anyone can use, and earn verified badges. Your first contribution takes 2 to 5 minutes, and you don't need to code.
 
-**[How to join](https://cybersectober.github.io/Cybersectober/join/)** · **[Leaderboard](https://cybersectober.github.io/Cybersectober/)** · **[Open-to-all challenges](https://github.com/CyberSecTober/Cybersectober/issues?q=is%3Aopen+label%3Aopen-to-all)** · **[Discussions](https://github.com/CyberSecTober/Cybersectober/discussions)**
+**[How to join](https://cybersectober.github.io/Cybersectober/join/)** · **[Play Shield Up](https://cybersectober.github.io/Cybersectober/play/)** · **[Leaderboard](https://cybersectober.github.io/Cybersectober/)** · **[Open-to-all challenges](https://github.com/CyberSecTober/Cybersectober/issues?q=is%3Aopen+label%3Aopen-to-all)** · **[Discussions](https://github.com/CyberSecTober/Cybersectober/discussions)**
 
 New to GitHub? [Create a free account](https://github.com/signup), sign in, and **star this repo** with the Star button at the top right of this page.
 

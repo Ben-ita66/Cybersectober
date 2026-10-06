@@ -71,6 +71,11 @@ input:focus,textarea:focus,select:focus{outline:2px solid var(--accent);border-c
 <p><a class="btn" href="https://github.com/signup">Create a free GitHub account</a><a class="btn ghost" href="https://github.com/CyberSecTober/Cybersectober">Visit the project</a></p>
 <p class="note">Never used GitHub before? That's fine. This page writes your contribution for you, and <a href="#github-steps">shows every screen you'll see on GitHub</a>. Nothing you do can break the project: a mentor checks everything before it's added.</p>
 
+<a href="../play/" style="display:flex;gap:14px;align-items:center;justify-content:space-between;flex-wrap:wrap;text-decoration:none;color:#F2F4F7;margin:22px 0 0;padding:18px 20px;border-radius:18px;background:linear-gradient(135deg,#5B4BDB,#2A1E7A 55%,#122a4a);border:1px solid rgba(255,255,255,.14)">
+  <span style="flex:1;min-width:200px"><span style="font:600 12px 'IBM Plex Mono',monospace;letter-spacing:.18em;color:#CFC8FF">NEW · SHIELD UP</span><br><b style="font-size:21px">Protect your people. Earn real badges.</b><br><span style="color:#D9D4FF;font-size:15px">Practise real-life security decisions, build an awareness kit for your market, church, mosque, school or family, and run a session with your squad.</span></span>
+  <span class="btn">Play</span>
+</a>
+
 <h2>Start here</h2>
 <div class="panel">
   <label for="user">Your GitHub username <span>(the name in your GitHub profile link, without @)</span></label>
@@ -292,6 +297,12 @@ input:focus,textarea:focus,select:focus{outline:2px solid var(--accent);border-c
 
   function updateAll() { store.set("cybersectober-user", username()); updatePost(); updateTip(); updateWrite(); }
   $("user").value = store.get("cybersectober-user");
+  // Links from the Eko Cyber Life game (and anywhere else) can pre-fill the boxes, e.g. ?user=ada&tip_title=...&tip=...#tip
+  var q = new URLSearchParams(location.search);
+  [["user", "user"], ["post_title", "post-title"], ["post_link", "post-link"], ["tip_title", "tip-title"], ["tip", "tip-text"], ["topic", "topic"]].forEach(function (m) {
+    if (q.get(m[0])) $(m[1]).value = q.get(m[0]).slice(0, 300);
+  });
+  if (q.get("kind") && STARTERS[q.get("kind")]) $("kind").value = q.get("kind");
   ["user", "post-title", "post-link", "tip-title", "tip-text", "topic"].forEach(function (id) { $(id).addEventListener("input", updateAll); });
   $("kind").addEventListener("change", updateAll);
   updateAll();

@@ -779,6 +779,12 @@ def build_site(ranked):
              f'<p class="muted" style="margin:12px 0 0;font-size:14px">Based on the Location field of each contributor\'s GitHub profile.</p></div>'
              f'<h2>Latest contributions</h2><div class="panel">{table(["Contributor", "Contribution", "Points"], latest_rows, "Nothing merged yet.")}</div>')
     open(os.path.join(OUT_DIR, "index.html"), "w").write(page("CyberSecTOBER 2026 Leaderboard", index, 0))
+    # Public, machine-readable record for the site's own pages (for example the Eko Cyber Life game).
+    with open(os.path.join(OUT_DIR, "data.json"), "w") as f:
+        json.dump({"updated": NOW.isoformat(timespec="minutes"),
+                   "contributors": [{"login": u["login"], "points": u["points"], "rank": u["rank"],
+                                     "badges": [s for s in BADGES if s in u["badges"]], "contributions": len(u["prs"])}
+                                    for u in ranked]}, f, indent=1)
 
     for u, p in contributions:
         d = os.path.join(OUT_DIR, "c", str(p["number"]))

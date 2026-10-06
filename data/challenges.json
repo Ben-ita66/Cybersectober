@@ -367,5 +367,20 @@
       "community",
       "points-5"
     ]
+  },
+  {
+    "title": "[Open to all] Run a cyber awareness session in your community",
+    "track": "community",
+    "difficulty": "beginner",
+    "points": 5,
+    "what": "Run a short cyber awareness session for people around you: traders at a market, your church or mosque, a school class, your office or your family WhatsApp group. Even 15 minutes with 5 people counts. The Shield Up game (https://cybersectober.github.io/Cybersectober/play/) builds a ready-to-share awareness kit in English or Pidgin and fills in the report for you. You can run it as a squad with friends.",
+    "done": "- A new file in [`community/sessions/`](https://github.com/CyberSecTober/Cybersectober/tree/main/community/sessions) named `your-github-username-community-yyyy-mm-dd.md`, based on [`templates/session-report.md`](https://github.com/CyberSecTober/Cybersectober/blob/main/templates/session-report.md).\n- Says who you reached, the 3 tips you shared and what people asked.\n- No full names, phone numbers or photos of children. List your squad's GitHub usernames so everyone is credited.",
+    "labels": [
+      "open-to-all",
+      "good first issue",
+      "beginner",
+      "community",
+      "points-5"
+    ]
   }
 ]
