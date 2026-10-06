@@ -7,3 +7,4 @@ Starter templates for contributions. Copy the one that fits your contribution in
 - `translation.md` — translation of existing content
 - `lab.md` — deliberately vulnerable lab environment
 - `tool.md` — security tool or script
+- `session-report.md` — report from a community awareness session

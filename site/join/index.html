@@ -292,6 +292,12 @@ input:focus,textarea:focus,select:focus{outline:2px solid var(--accent);border-c
 
   function updateAll() { store.set("cybersectober-user", username()); updatePost(); updateTip(); updateWrite(); }
   $("user").value = store.get("cybersectober-user");
+  // Links from the Eko Cyber Life game (and anywhere else) can pre-fill the boxes, e.g. ?user=ada&tip_title=...&tip=...#tip
+  var q = new URLSearchParams(location.search);
+  [["user", "user"], ["post_title", "post-title"], ["post_link", "post-link"], ["tip_title", "tip-title"], ["tip", "tip-text"], ["topic", "topic"]].forEach(function (m) {
+    if (q.get(m[0])) $(m[1]).value = q.get(m[0]).slice(0, 300);
+  });
+  if (q.get("kind") && STARTERS[q.get("kind")]) $("kind").value = q.get("kind");
   ["user", "post-title", "post-link", "tip-title", "tip-text", "topic"].forEach(function (id) { $(id).addEventListener("input", updateAll); });
   $("kind").addEventListener("change", updateAll);
   updateAll();
